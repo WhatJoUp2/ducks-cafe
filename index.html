@@ -1,16 +1,41 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>Duck's Nest Café</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fascinate">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fascinate Inline">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis|Fascinate Inline|Fascinate">
     <script src="https://kit.fontawesome.com/2f32d72445.js" crossorigin="anonymous"></script>
     <link rel="icon" href="favicon.ico" type="image/icon type">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background: rgb(2, 0, 36);
-            background: linear-gradient(224deg, #3C8230 0%, #8CB548 70%);
-            margin: 0;
+            line-height: 1.0;
+            min-height: 100vh;
+            min-width: 320px;
+            overflow-x: hidden;
+            word-wrap: break-word;
+        }
+
+        body::before {
+            background-attachment: scroll;
+            content: '';
+            display: block;
+            height: 100vh;
+            left: 0;
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            transform: scale(1);
+            width: 100vw;
+            z-index: -1;
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%22600%22%20height%3D%22347%22%20viewBox%3D%220%200%20600%20347%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22filter%3A%20blur%286px%29%22%20preserveAspectRatio%3D%22none%22%3E%20%3Cstyle%20type%3D%22text%2Fcss%22%3E%20polygon%20%7B%20fill%3A%20rgba(250,255,0,0.502)%3B%20transform%3A%20scale%28150%25%29%3B%20%7D%20%3C%2Fstyle%3E%20%3Cpolygon%20points%3D%22150.0%2C225.1666%20170.0%2C225.1666%20180.0%2C242.4871%20170.0%2C259.8076%20150.0%2C259.8076%20140.0%2C242.4871%22%20fill-opacity%3D%220.78%22%20%2F%3E%20%3Cpolygon%20points%3D%22540.0%2C277.1281%20560.0%2C277.1281%20570.0%2C294.4486%20560.0%2C311.7691%20540.0%2C311.7691%20530.0%2C294.4486%22%20fill-opacity%3D%220.14%22%20%2F%3E%20%3Cpolygon%20points%3D%22450.0%2C225.1666%20470.0%2C225.1666%20480.0%2C242.4871%20470.0%2C259.8076%20450.0%2C259.8076%20440.0%2C242.4871%22%20fill-opacity%3D%220.4%22%20%2F%3E%20%3Cpolygon%20points%3D%22300.0%2C242.4871%20320.0%2C242.4871%20330.0%2C259.8076%20320.0%2C277.1281%20300.0%2C277.1281%20290.0%2C259.8076%22%20fill-opacity%3D%220.93%22%20%2F%3E%20%3Cpolygon%20points%3D%22270.0%2C17.3205%20290.0%2C17.3205%20300.0%2C34.641%20290.0%2C51.9615%20270.0%2C51.9615%20260.0%2C34.641%22%20fill-opacity%3D%220.14%22%20%2F%3E%20%3Cpolygon%20points%3D%22150.0%2C17.3205%20170.0%2C17.3205%20180.0%2C34.641%20170.0%2C51.9615%20150.0%2C51.9615%20140.0%2C34.641%22%20fill-opacity%3D%220.39%22%20%2F%3E%20%3Cpolygon%20points%3D%22510.0%2C51.9615%20530.0%2C51.9615%20540.0%2C69.282%20530.0%2C86.6025%20510.0%2C86.6025%20500.0%2C69.282%22%20fill-opacity%3D%220.19%22%20%2F%3E%20%3Cpolygon%20points%3D%22510.0%2C190.5256%20530.0%2C190.5256%20540.0%2C207.8461%20530.0%2C225.1666%20510.0%2C225.1666%20500.0%2C207.8461%22%20fill-opacity%3D%220.66%22%20%2F%3E%20%3Cpolygon%20points%3D%22360.0%2C173.2051%20380.0%2C173.2051%20390.0%2C190.5256%20380.0%2C207.8461%20360.0%2C207.8461%20350.0%2C190.5256%22%20fill-opacity%3D%220.0%22%20%2F%3E%20%3Cpolygon%20points%3D%22240.0%2C173.2051%20260.0%2C173.2051%20270.0%2C190.5256%20260.0%2C207.8461%20240.0%2C207.8461%20230.0%2C190.5256%22%20fill-opacity%3D%220.6%22%20%2F%3E%20%3Cpolygon%20points%3D%22300.0%2C69.282%20320.0%2C69.282%20330.0%2C86.6025%20320.0%2C103.923%20300.0%2C103.923%20290.0%2C86.6025%22%20fill-opacity%3D%220.59%22%20%2F%3E%20%3Cpolygon%20points%3D%2230.0%2C259.8076%2050.0%2C259.8076%2060.0%2C277.1281%2050.0%2C294.4486%2030.0%2C294.4486%2020.0%2C277.1281%22%20fill-opacity%3D%220.38%22%20%2F%3E%20%3Cpolygon%20points%3D%2230.0%2C17.3205%2050.0%2C17.3205%2060.0%2C34.641%2050.0%2C51.9615%2030.0%2C51.9615%2020.0%2C34.641%22%20fill-opacity%3D%220.16%22%20%2F%3E%20%3Cpolygon%20points%3D%22390.0%2C121.2436%20410.0%2C121.2436%20420.0%2C138.5641%20410.0%2C155.8846%20390.0%2C155.8846%20380.0%2C138.5641%22%20fill-opacity%3D%220.71%22%20%2F%3E%20%3Cpolygon%20points%3D%22450.0%2C51.9615%20470.0%2C51.9615%20480.0%2C69.282%20470.0%2C86.6025%20450.0%2C86.6025%20440.0%2C69.282%22%20fill-opacity%3D%220.68%22%20%2F%3E%20%3Cpolygon%20points%3D%22180.0%2C277.1281%20200.0%2C277.1281%20210.0%2C294.4486%20200.0%2C311.7691%20180.0%2C311.7691%20170.0%2C294.4486%22%20fill-opacity%3D%220.39%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(224deg, #3C8230 0%, #8CB548 60%);
+            background-size: cover, auto;
+            background-position: center, 0% 0%;
+            background-repeat: no-repeat, repeat;
+            box-sizing: border-box;
         }
 
         a {
@@ -103,10 +128,10 @@
 
         .menu-desc {
             color: #FFD600;
-            font-family: 'Fascinate Inline', cursive;
+            font-family: 'Dosis', cursive;
             font-size: 1em;
-            line-height: 1.5;
-            font-weight: 400;
+            line-height: 1.7;
+            font-weight: 600;
             font-style: italic;
         }
 
@@ -120,6 +145,13 @@
             font-size: 1.2em;
             font-weight: 400;
             text-align: center;
+            margin-bottom: 1.5em;
+        }
+
+        .icon-button {
+            padding: 0;
+            height: 2em;
+            width: 2em;
         }
 
         #page {
@@ -156,12 +188,6 @@
             font-size: 2em;
             text-align: center;
         }
-
-        #discord-button {
-            padding: 0;
-            height: 2em;
-            width: 2em;
-        }
     </style>
 </head>
 
@@ -172,21 +198,26 @@
             <a draggable="false" href="#coffee">Coffee</a>
             <a draggable="false" href="#tea">Tea</a>
             <a draggable="false" href="#pastries">Pastries</a>
-            <a draggable="false" id="discord-button">
+            <a draggable="false" target="_blank" href="https://discord.gg/vmm5srUpWd" class="icon-button">
                 <i class='fab fa-discord'></i>
             </a>
         </div>
         <div class="divider"></div>
-        <h1>Welcome to</h1>
+        <h1>• Welcome to •</h1>
         <div class="divider"></div>
         <div id="logo">
-            <img draggable="false" src="https://cdn.discordapp.com/attachments/935292199594229800/1112160851894485062/Ducks_Nest.png" />
+            <img draggable="false"
+                src="https://cdn.discordapp.com/attachments/935292199594229800/1112160851894485062/Ducks_Nest.png" />
         </div>
         <div class="divider"></div>
-        <div id="location">
-            <div>Louisoix • Ishgard</div>
-            <div>Ward 1, Appartment 68 </div>
+        <div class="menu-group">
+
+            <div id="location">
+                <div>Louisoix • Ishgard</div>
+                <div>Ward 1, Appartment 68 </div>
+            </div>
         </div>
+
         <div id="drinks" class="divider"></div>
         <div class="menu-group">
             <h3>• Drinks •</h3>
@@ -220,6 +251,9 @@
                 "Just the right ammount of accidity, just the right ammount of sweet, nothing beats a fresh cup of
                 lemonade."
             </div>
+            <a href="#page" class="icon-button" style="align-self: center;">
+                <i class="fa-solid fa-caret-up"></i>
+            </a>
         </div>
         <div id="coffee" class="divider"></div>
         <div class="menu-group">
@@ -272,6 +306,9 @@
             </div>
             <div class="divider"></div>
             <div class="menu-note">• All come with iced and non-dairy versions •</div>
+            <a href="#page" class="icon-button" style="align-self: center;">
+                <i class="fa-solid fa-caret-up"></i>
+            </a>
         </div>
         <div id="tea" class="divider"></div>
         <div class="menu-group">
@@ -322,6 +359,9 @@
                 "Finely ground green tea leaves, made into a paste and mixed with hot spring water, creating an herbal
                 and nutty drink with a pleasant savorty ending."
             </div>
+            <a href="#page" class="icon-button" style="align-self: center;">
+                <i class="fa-solid fa-caret-up"></i>
+            </a>
         </div>
         <div id="pastries" class="divider"></div>
         <div class="menu-group">
@@ -381,6 +421,9 @@
             <div class="menu-desc">
                 "Small, bitesized custard pies, made with puff pastry dough and topped with cinnamon."
             </div>
+            <a href="#page" class="icon-button" style="align-self: center;">
+                <i class="fa-solid fa-caret-up"></i>
+            </a>
         </div>
 </body>
 
