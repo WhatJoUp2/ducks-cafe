@@ -7,6 +7,20 @@
     <script src="https://kit.fontawesome.com/2f32d72445.js" crossorigin="anonymous"></script>
     <link rel="icon" href="favicon.ico" type="image/icon type">
     <style>
+        @keyframes coin-flip {
+            0% {
+                transform: scaleX(1);
+            }
+
+            50% {
+                transform: scaleX(-1);
+            }
+
+            100% {
+                transform: scaleX(1);
+            }
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -181,6 +195,11 @@
             border-radius: 100%;
             background: #FFD600;
             box-shadow: rgba(0, 0, 0, 0.27) 0.34rem 0.37rem 0.5rem 0rem;
+        }
+        #logo:hover{
+            animation-name: coin-flip;
+            animation-duration: .5s;
+            animation-delay: .25s;
         }
 
         #location {
