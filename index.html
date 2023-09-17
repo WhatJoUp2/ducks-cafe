@@ -224,8 +224,13 @@
         </div>
         <div class="divider"></div>
         <h1>• Welcome to •</h1>
+        <audio id="quack" preload="auto" volume="0.2">
+            <source src="https://cdn.discordapp.com/attachments/884098356585046018/1153070463933763744/075176_duck-quack-40345.mp3" type="audio/mpeg">
+        </audio>
         <div class="divider"></div>
-        <div id="logo">
+        <div id="logo"
+            onmouseover="quackPlz()"
+        >
             <img draggable="false"
                 src="https://cdn.discordapp.com/attachments/884098356585046018/1113860256943050892/Ducks_Nest_2.png" />
         </div>
@@ -445,6 +450,11 @@
                 <i class="fa-solid fa-caret-up"></i>
             </a>
         </div>
+        <script>
+            function quackPlz() {
+                document.getElementById('quack').play();
+            }
+        </script>    
 </body>
 
 </html>
